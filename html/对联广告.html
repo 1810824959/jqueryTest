@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .left{
+            top: 20%;
+            left: 0;
+            position: fixed;
+            /*display: none;*/
+        }
+
+        .right{
+            top: 20%;
+            right: 0;
+            position: fixed;
+            /*display: none;*/
+        }
+
+        .guanggao{
+            display: none;
+            /*display: block;*/
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.js"></script>
+
+    <!--实现，滚动条到达一定程度，显示两侧弹出广告，滚上去又消失-->
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                var instance = $("html,body").scrollTop();
+                // console.log($("html,body").scrollTop());
+                if(instance>800){
+                    $(".guanggao").show()
+                }else{
+                    $(".guanggao").hide()
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+
+<div class="guanggao">
+    <img class="left" src="../img/1.jpg" height="275" width="309"/>
+    <img class="right" src="../img/2.jpg" height="275" width="309"/>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

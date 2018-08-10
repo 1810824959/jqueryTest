@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            width: 300px;
+            height: 450px;
+            margin: 50px auto;
+            border: 1px solid #000000;
+
+        }
+
+        h1{
+            font-size: 30px;
+            color: deeppink;
+        }
+
+        ul>li{
+            list-style: none;
+            /*margin-top: 10px;*/
+            padding: 10px 10px;
+            border: 1px dashed #ccc;
+        }
+
+        ul>li:nth-child(-n+4) span{
+            background: deeppink;
+        }
+
+        ul>li>span{
+            display:inline-block;
+            margin-right: 10px;
+            /*margin-left: 10px;*/
+            background: #ccc;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+        }
+
+        .content>img{
+            width: 80px;
+            height: 120px;
+            float: left;
+        }
+        .content>p{
+            width: 180px;
+            height: 120px;
+            float: right;
+            overflow: auto;
+            /*font-size: 5px;*/
+        }
+
+        .content{
+            overflow: hidden;
+            display: none;
+        }
+
+        .current .content{
+            display: block;
+        }
+
+    </style>
+    <script src="../js/jquery-1.12.4.js"></script>
+
+    <!--动态显示，每一条的具体信息-->
+    <script>
+        $(function () {
+            $(function () {
+                $("li").mouseenter(function () {
+                    $(this).addClass("current")
+                    // this.addClass()
+                    // alert("dd")
+                })
+
+                $("li").mouseleave(function () {
+                    $(this).removeClass("current")
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <h1>电影排行</h1>
+        <li><span>1</span>名字
+            <div class="content">
+                <img src="../img/1.jpg"/>
+                <p>跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频</p>
+            </div>
+        </li>
+        <li><span>2</span>名字
+            <div class="content">
+                <img src="../img/1.jpg"/>
+                <p>跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频</p>
+            </div></li>
+        <li><span>3</span>名字
+            <div class="content">
+                <img src="../img/1.jpg"/>
+                <p>跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频跟着江哥从"零"玩转jQuery原理+Ajax系列全套视频</p>
+            </div></li>
+        <li><span>4</span>名字</li>
+        <li><span>5</span>名字</li>
+        <li><span>6</span>名字</li>
+    </ul>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .fa{
+            background: red;
+            width: 200px;
+            height: 200px;
+        }
+
+        .so{
+            background: blue;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    <!---->
+    <script>
+        $(function () {
+            $(".fa").click(function () {
+                alert("fa");
+            });
+
+            $(".so").click(function () {
+                alert("so");
+                return false;
+            });
+
+
+            $(".so").triggerHandler()
+        })
+
+    </script>
+</head>
+<body>
+
+<div class="fa">
+    <div class="so"></div>
+</div>
+
+
+</body>
+</html>

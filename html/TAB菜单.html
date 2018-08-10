@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            margin: 50px auto;
+            border: 1px solid #000;
+            width: 480px;
+            height: 400px;
+        }
+
+        .num>li{
+            width: 120px;
+            height: 50px;
+            background: orange;
+            float: left;
+            list-style: none;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .num>.grey{
+            background: #ccc;
+        }
+
+        .content>li{
+            display: none;
+        }
+
+        .content>.show{
+            display: block;
+        }
+
+        img{
+            width: 480px;
+            height: 350px;
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.js"></script>
+
+    <!--实现，鼠标移入哪个标签，显示出对应的图片，移除更换-->
+    <script>
+        $(function () {
+            $(function () {
+                $(".num>li").mouseenter(function () {
+                    $(this).addClass("grey").siblings().removeClass("grey");
+                    // $(this).siblings().removeClass("grey");
+                    var index = $(this).index();
+                    $(".content>li").eq(index).addClass("show").siblings().removeClass("show")
+                })
+
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="box">
+    <ul class="num">
+        <li class="grey">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+
+    </ul>
+
+    <ul class="content">
+        <li class="show"><img src="../img/1.jpg" alt=""></li>
+        <li><img src="../img/2.jpg" alt=""></li>
+        <li><img src="../img/3.jpg" alt=""></li>
+        <li><img src="../img/4.jpg" alt=""></li>
+
+    </ul>
+</div>
+</body>
+</html>
