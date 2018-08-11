@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                var $text = $.ajax({
+                    type:"get",
+                    url:"/test",
+                    success:function () {
+                        alert($text.responseText)
+                    }
+                })
+            });
+            console.log($text.responseText);
+        })
+    </script>
+</head>
+<body>
+<button>submit</button>
+</body>
+</html>
